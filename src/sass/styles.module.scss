@@ -1,0 +1,116 @@
+@import "fonts";
+@import "colors";
+
+:export {
+  primaryFont: $titillium;
+  secondryFont: $catamaran;
+
+  primaryColor: $primaryColor;
+  secondaryColor: $secondaryColor;
+
+  darkPrimaryColor: $darkPrimaryColor;
+  darkSecondaryColor: $darkSecondaryColor;
+
+  lightPrimaryColor: $lightPrimaryColor;
+
+  textPrimaryColor: $textPrimaryColor;
+  textSecondaryColor: $textSecondaryColor;
+
+  whiteColor: $white;
+  silver: $silver;
+  litesilver: $litesilver;
+  darksilver: $darksilver;
+
+  darkColor: $darkColor;
+  blackColor: $blackColor;
+  grayColor: $grayColor;
+
+  successMainColor: $successMainColor;
+  successLightColor: $successLightColor;
+  successDarkColor: $successDarkColor;
+
+  infoMainColor: $infoMainColor;
+  infoLightColor: $infoLightColor;
+  infoDarkColor: $infoDarkColor;
+
+  warningMainColor: $warningMainColor;
+  warningLightColor: $warningLightColor;
+  warningDarkColor: $warningDarkColor;
+
+  errorMainColor: $errorMainColor;
+  errorLightColor: $errorLightColor;
+  errorDarkColor: $errorDarkColor;
+
+  headMainColor: $headMainColor;
+  bolgurlColor: $bolgurlColor;
+  bloglmccolor: $bloglmccolor;
+
+  doveGray: $doveGray;
+  flushOrange: $flushOrange;
+  orangePeel: $orangePeel;
+  goblin: $goblin;
+  mangoTango: $mangoTango;
+  springWood: $springWood;
+  alto: $alto;
+  red: $red;
+  eucalyptus: $eucalyptus;
+  emperor: $emperor;
+  codGray: $codGray;
+  earlsGreen: $earlsGreen;
+  pepperMint: $pepperMint;
+  killarney: $killarney;
+  limeade: $limeade;
+  grayLight: $grayLight;
+  japaneseLaurel: $japaneseLaurel;
+  berylGreen: $berylGreen;
+  darkAlto: $darkAlto;
+  silverChalice: $silverChalice;
+  wildSand: $wildSand;
+  laPalma: $laPalma;
+  atlantis: $atlantis;
+  mercury: $mercury;
+  tableRowColor: $tableRowColor;
+  grayColorTable: $grayColorTable;
+
+  lightGallery: $lightGallery;
+  doveGray: $doveGray;
+  mainSilver: $mainSilver;
+  mangoTango: $mangoTango;
+  orangePeel: $orangePeel;
+  blackRussian: $blackRussian;
+  dustyGrey: $dustyGrey;
+  alto: $alto;
+  heatheredGrey: $heatheredGrey;
+  altoLight: $altoLight;
+  bilBao: $bilBao;
+  gallery: $gallery;
+  trout: $trout;
+
+  eucalyptusColor: $eucalyptus;
+  osloGrayColor: $osloGray;
+  deepCeruleanColor: $deepCerulean;
+
+  grayColor: $grayColor;
+  lightGray: $lightGray;
+
+  Eucalyptus: $Eucalyptus;
+  Alto: $Alto;
+
+  liteGrayColor: $liteGrayColor;
+  OsloGrey: $OsloGrey;
+
+  greenColor: $greenColor;
+  litgreenColor: $litgreenColor;
+
+  calibri: $calibri;
+  brownBranble: $brownBranble;
+  DroidSans: $DroidSans;
+  roboto: $roboto;
+  alesanColor: $alesanColor;
+  lightGrayColor: $lightGrayColor;
+  defenseGreen: $defenseGreen;
+  salem: $Salem;
+  brightYellowColor: $brightYellowColor;
+  creamColor: $creamColor;
+  darkYellowColor: $darkYellowColor;
+}

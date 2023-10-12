@@ -1,0 +1,156 @@
+/* Light */
+@font-face {
+  font-family: "Titillium Web";
+  src: url(./fonts/Titillium_Web/TitilliumWeb-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+/* Normal */
+@font-face {
+  font-family: "Titillium Web";
+  src: url(./fonts/Titillium_Web/TitilliumWeb-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+/* Medium */
+@font-face {
+  font-family: "Titillium Web";
+  src: url(./fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+/* Bold */
+@font-face {
+  font-family: "Titillium Web";
+  src: url(./fonts/Titillium_Web/TitilliumWeb-Bold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+/* Black */
+@font-face {
+  font-family: "Titillium Web";
+  src: url(./fonts/Titillium_Web/TitilliumWeb-Black.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Catamaran";
+  src: url(./fonts/Catamaran/Catamaran-VariableFont_wght.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Catamaran";
+  src: url(./fonts/Catamaran/Catamaran-VariableFont_wght.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Catamaran";
+  src: url(./fonts/Catamaran/Catamaran-VariableFont_wght.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Catamaran";
+  src: url(./fonts/Catamaran/Catamaran-VariableFont_wght.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Catamaran";
+  src: url(./fonts/Catamaran/Catamaran-VariableFont_wght.ttf) format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Catamaran";
+  src: url(./fonts/Catamaran/Catamaran-VariableFont_wght.ttf) format("truetype");
+  font-weight: 900;
+}
+:export {
+  primaryFont: "Titillium Web", sans-serif;
+  secondryFont: "Catamaran", sans-serif;
+  primaryColor: #ff9900;
+  secondaryColor: #5cb85c;
+  darkPrimaryColor: #e88800;
+  darkSecondaryColor: #449d44;
+  lightPrimaryColor: rgba(255, 153, 0, 0.1215686275);
+  textPrimaryColor: #000000;
+  textSecondaryColor: #2a2a2a;
+  whiteColor: #ffffff;
+  silver: #fbfbfb;
+  litesilver: #f5f5f5;
+  darksilver: #cccccc;
+  darkColor: #333333;
+  blackColor: #000000;
+  grayColor: #c2c2c2;
+  successMainColor: #58b131;
+  successLightColor: #43c6b7;
+  successDarkColor: #0e8074;
+  infoMainColor: #2196f3;
+  infoLightColor: #64b6f7;
+  infoDarkColor: #0b79d0;
+  warningMainColor: #ffb020;
+  warningLightColor: #ffbf4c;
+  warningDarkColor: #b27b16;
+  errorMainColor: #d14343;
+  errorLightColor: #da6868;
+  errorDarkColor: #922e2e;
+  headMainColor: #28a745;
+  bolgurlColor: #868e96;
+  bloglmccolor: #0085a1;
+  doveGray: #666666;
+  flushOrange: #ff8000;
+  orangePeel: #f90;
+  goblin: #398439;
+  mangoTango: #ed7500;
+  springWood: #f5f2ed;
+  alto: #d7d7d7;
+  red: #ff0000;
+  eucalyptus: #28a745;
+  emperor: #555555;
+  codGray: #1d1d1d;
+  earlsGreen: rgba(193, 193, 193, 0.231372549);
+  pepperMint: #dff0d8;
+  killarney: #3c763d;
+  limeade: #789a02;
+  grayLight: #808080;
+  japaneseLaurel: #008000;
+  berylGreen: #d6e9c6;
+  darkAlto: #dddddd;
+  silverChalice: #adabab;
+  wildSand: #f5f5f5;
+  laPalma: #0cad0c;
+  atlantis: #8ae234;
+  mercury: #e6e6e6;
+  tableRowColor: #ebebeb;
+  grayColorTable: #8b8b8b;
+  lightGallery: #eeeeee;
+  doveGray: #666666;
+  mainSilver: #bbbbbb;
+  mangoTango: #ed7500;
+  orangePeel: #f90;
+  blackRussian: rgba(0, 0, 0, 0.031372549);
+  dustyGrey: #989696;
+  alto: #d7d7d7;
+  heatheredGrey: #bcac93;
+  altoLight: #d3d3d3;
+  bilBao: #187716;
+  gallery: #f0f0f0;
+  trout: #495057;
+  eucalyptusColor: #28a745;
+  osloGrayColor: #868e96;
+  deepCeruleanColor: #0085a1;
+  grayColor: #c2c2c2;
+  lightGray: #f2f2f2;
+  Eucalyptus: #28a745;
+  Alto: #dddddd;
+  liteGrayColor: #adabab;
+  OsloGrey: #7f8c8d;
+  greenColor: #008000;
+  litgreenColor: rgba(7, 134, 4, 0.6784313725);
+  calibri: "calibri";
+  brownBranble: #603b04;
+  DroidSans: "DroidSans";
+  roboto: "Roboto", sans-serif;
+  alesanColor: #f2d0b5;
+  lightGrayColor: rgba(230, 226, 226, 0.8784313725);
+  defenseGreen: #84a513;
+  salem: #039138;
+} /*# sourceMappingURL=styles.module.css.map */
