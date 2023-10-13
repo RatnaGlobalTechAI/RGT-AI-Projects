@@ -43,23 +43,10 @@ const VibrationChart = () => {
   const getThresholdData = async () => {
     if(deviceName){
       const response = await getDeviceThreshold(deviceName);
+      //eslint-disable-next-line
+      console.log(response)
       if (response) {
-        setDeviceThreshold({
-          vibration: {
-            green: response?.vibration?.green.substring(
-              0,
-              response?.vibration?.green.indexOf(" "),
-            ),
-            red: response?.vibration?.red.substring(
-              0,
-              response?.vibration?.red.indexOf(" "),
-            ),
-            yellow: response?.vibration?.yellow.substring(
-              0,
-              response?.vibration?.yellow.indexOf(" "),
-            ),
-          },
-        });
+        setDeviceThreshold(response);
       }
     }
   };
@@ -68,8 +55,16 @@ const VibrationChart = () => {
   const getMonitorData = async () => {
     if(deviceName){
       const response = await getDeviceData(deviceName);
+      //eslint-disable-next-line
+      console.log(response)
       if (response) {
-        setDeviceData(response?.telemetryDataPoints[1]);
+        if(tabValue===0){
+          setDeviceData(response?.telemetryDataPoints[1]);
+        }else if(tabValue===1){
+          setDeviceData(response?.telemetryDataPoints[2]);
+        }else{
+          setDeviceData(response?.telemetryDataPoints[0]);
+        }
       }
     }
   };
@@ -96,26 +91,71 @@ const VibrationChart = () => {
     };
   }, []);
 
+  //eslint-disable-next-line
+  console.log(deviceThreshold)
+
   useEffect(() => {
-    setChartData([
-      {
-        peakValue: deviceThreshold?.vibration?.red,
-        averageValue: deviceThreshold?.vibration?.yellow,
-        goodValue: deviceThreshold?.vibration?.green,
-      },
-      {
-        peakValue: deviceThreshold?.vibration?.red,
-        averageValue: deviceThreshold?.vibration?.yellow,
-        goodValue: deviceThreshold?.vibration?.green,
-        xAxis: deviceData?.date,
-        presentValue: deviceData?.vibration,
-      },
-      {
-        peakValue: deviceThreshold?.vibration?.red,
-        averageValue: deviceThreshold?.vibration?.yellow,
-        goodValue: deviceThreshold?.vibration?.green,
-      },
-    ]);
+    if(tabValue===0){
+      setChartData([
+        {
+          peakValue: 100,
+          averageValue: Number(deviceThreshold?.vibration?.yellow),
+          goodValue: Number(deviceThreshold?.vibration?.green),
+        },
+        {
+          peakValue: 100,
+          averageValue: Number(deviceThreshold?.vibration?.yellow),
+          goodValue: Number(deviceThreshold?.vibration?.green),
+          xAxis: deviceData?.date,
+          presentValue: deviceData?.vibration,
+        },
+        {
+          peakValue: 100,
+          averageValue: Number(deviceThreshold?.vibration?.yellow),
+          goodValue: Number(deviceThreshold?.vibration?.green),
+        },
+      ]);
+    }else if(tabValue===1){
+      setChartData([
+        {
+          peakValue: 100,
+          averageValue: Number(deviceThreshold?.noise?.yellow),
+          goodValue: Number(deviceThreshold?.noise?.green),
+        },
+        {
+          peakValue: 100,
+          averageValue: Number(deviceThreshold?.noise?.yellow),
+          goodValue: Number(deviceThreshold?.noise?.green),
+          xAxis: deviceData?.date,
+          presentValue: deviceData?.noise,
+        },
+        {
+          peakValue: 100,
+          averageValue: Number(deviceThreshold?.noise?.yellow),
+          goodValue: Number(deviceThreshold?.noise?.green),
+        },
+      ]);
+    }else{
+      setChartData([
+        {
+          peakValue: 100,
+          averageValue: Number(deviceThreshold?.temperature?.yellow),
+          goodValue: Number(deviceThreshold?.temperature?.green),
+        },
+        {
+          peakValue: 100,
+          averageValue: Number(deviceThreshold?.temperature?.yellow),
+          goodValue: Number(deviceThreshold?.temperature?.green),
+          xAxis: deviceData?.date,
+          presentValue: deviceData?.temperature,
+        },
+        {
+          peakValue: 100,
+          averageValue: Number(deviceThreshold?.temperature?.yellow),
+          goodValue: Number(deviceThreshold?.temperature?.green),
+        },
+      ]);
+    }
   }, [deviceThreshold, deviceData]);
   
   useEffect(()=>{

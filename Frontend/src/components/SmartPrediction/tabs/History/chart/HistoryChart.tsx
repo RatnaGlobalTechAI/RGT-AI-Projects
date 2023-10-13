@@ -22,25 +22,25 @@ const HistoryChart = (props: historyChartProps) => {
     for (let i = 0; i < chartData.length; i++) {
       if (metric === "Vibration") {
         chartVertex.push({
-          peakValue: deviceThreshold?.vibration?.red as number,
-          averageValue: deviceThreshold?.vibration?.yellow as number,
-          goodValue: deviceThreshold?.vibration?.green as number,
+          peakValue: Number(deviceThreshold?.vibration?.red) ,
+          averageValue: Number(deviceThreshold?.vibration?.yellow) ,
+          goodValue: Number(deviceThreshold?.vibration?.green) ,
           presentValue: Number(chartData[i].value),
           time: chartData[i].time,
         });
       } else if (metric === "Noise") {
         chartVertex.push({
-          peakValue: deviceThreshold?.noise?.red as number,
-          averageValue: deviceThreshold?.noise?.yellow as number,
-          goodValue: deviceThreshold?.noise?.green as number,
+          peakValue: Number(deviceThreshold?.noise?.red),
+          averageValue: Number(deviceThreshold?.noise?.yellow),
+          goodValue: Number(deviceThreshold?.noise?.green),
           presentValue: Number(chartData[i].value),
           time: chartData[i].time,
         });
       } else {
         chartVertex.push({
-          peakValue: deviceThreshold?.temperature?.red as number,
-          averageValue: deviceThreshold?.temperature?.yellow as number,
-          goodValue: deviceThreshold?.temperature?.green as number,
+          peakValue: Number(deviceThreshold?.temperature?.red),
+          averageValue: Number(deviceThreshold?.temperature?.yellow),
+          goodValue: Number(deviceThreshold?.temperature?.green),
           presentValue: Number(chartData[i].value),
           time: chartData[i].time,
         });

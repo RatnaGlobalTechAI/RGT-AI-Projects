@@ -77,30 +77,30 @@ const History = () => {
         tableIndex.end > totalCount ? totalCount : tableIndex.end,
         param
       );
-      for (let j = 0; j < response.telemetryDataPoints?.length; j++) {
+      for (let j = 0; j < response?.telemetryDataPoints?.length; j++) {
         counter = counter + 1;
         if (tabValue === 0) {
           deviceHistory.push({
             id: 1,
-            status: response.telemetryDataPoints[j].status,
-            time: response.telemetryDataPoints[j].date,
-            value: response.telemetryDataPoints[j].vibration,
+            status: response?.telemetryDataPoints?.[j]?.status,
+            time: response?.telemetryDataPoints?.[j]?.date,
+            value: response?.telemetryDataPoints?.[j]?.vibration,
             key: response?.telemetryDataPoints?.[j]?.date,
           });
         } else if (tabValue === 1) {
           deviceHistory.push({
             id: 1,
-            status: response.telemetryDataPoints[j].status,
-            time: response.telemetryDataPoints[j].date,
-            value: response.telemetryDataPoints[j].noise,
+            status: response?.telemetryDataPoints?.[j]?.status,
+            time: response?.telemetryDataPoints?.[j]?.date,
+            value: response?.telemetryDataPoints?.[j]?.noise,
             key: response?.telemetryDataPoints?.[j]?.date,
           });
         } else if (tabValue === 2) {
           deviceHistory.push({
             id: 1,
-            status: response.telemetryDataPoints[j].status,
-            time: response.telemetryDataPoints[j].date,
-            value: response.telemetryDataPoints[j].temperature,
+            status: response?.telemetryDataPoints?.[j]?.status,
+            time: response?.telemetryDataPoints?.[j]?.date,
+            value: response?.telemetryDataPoints?.[j]?.temperature,
             key: response?.telemetryDataPoints?.[j]?.date,
           });
         }

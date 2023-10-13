@@ -15,19 +15,22 @@ export interface paginationType {
 
 export interface thresholdType {
   vibration?: {
-    red?: number;
-    yellow?: number;
-    green?: number;
+    red?: string;
+    yellow?: string;
+    green?: string;
+    unit? : string
   };
   noise?: {
-    red?: number;
-    yellow?: number;
-    green?: number;
+    red?: string;
+    yellow?: string;
+    green?: string;
+    unit? : string
   };
   temperature?: {
-    red?: number;
-    yellow?: number;
-    green?: number;
+    red?: string;
+    yellow?: string;
+    green?: string;
+    unit? : string
   };
 }
 export interface telemetryDataPointsType {
@@ -213,20 +216,19 @@ export interface notificationTableProps {
 
 export interface notificationType {
   enable: boolean;
-  channels: [
+  channels: 
     {
       name: string;
       enable: boolean;
-    },
-    {
-      name: string;
-      enable: boolean;
-    },
-    {
-      name: string;
-      enable: boolean;
-    },
-  ];
+    }[],
+}
+
+export interface configurationResponseType {
+  deviceThresholds : {
+    device : string
+    thresholds : thresholdType
+  }[],
+  notifications : notificationType
 }
 
 export interface configurationDetailsType {

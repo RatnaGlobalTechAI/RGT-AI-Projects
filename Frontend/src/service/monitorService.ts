@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { errorHandler } from "genericComponents/toaster/toaster";
 import { apiWrapper } from "./apiWrapper.service";
-import { configurationDetailsType } from "types/Monitoring.types";
+import { configurationResponseType } from "types/Monitoring.types";
 
 // api service to get device names
 export const getDeviceNames = async () => {
@@ -103,9 +103,9 @@ export const acknowledgeDeviceNotification = async (
 };
 
 // api service for device  notification settings
-export const getConfigurationDetails = async () => {
+export const getConfigurationDetails = async (deviceName:string) => {
   try {
-    const response = await apiWrapper.get("/deviceReader/settings");
+    const response = await apiWrapper.get(`/deviceReader/settings/${deviceName}`);
     if (response?.data) {
       return response?.data;
     }
@@ -116,7 +116,7 @@ export const getConfigurationDetails = async () => {
 
 // api service for device  notification settings
 export const setConfigurationDetails = async (
-  configurationDetails: configurationDetailsType,
+  configurationDetails: configurationResponseType,
 ): Promise<void | string> => {
   try {
     const response = await apiWrapper.post(
